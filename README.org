@@ -1,0 +1,16 @@
+#this code/software is available under GPL license.
+
+Boli (meaning, dialect)
+
+This is a (priliminary) QT application for specialised interfacing. 
+
+To run:
+>python boli.py
+
+Requirements:
+1) Python 2.6/2.7
+2) PyQt4
+3) festival
+
+By:
+C.H.Chaitanya (ccluri@gmail.com)

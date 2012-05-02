@@ -1,8 +1,19 @@
-#this code/software is available under GPL license.
+#Author:Chaitanya CH
+#FileName: README.org 
+
+#This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 3, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
 
 Boli (meaning, dialect)
 
-This is a (priliminary) QT application for specialised interfacing. 
+This is a (preliminary) QT application for specialised interfacing. 
 
 To run:
 >python boli.py

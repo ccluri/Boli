@@ -1,3 +1,16 @@
+#Author:Chaitanya CH
+#FileName: boli.py
+
+#This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 3, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+
 import sys
 import subprocess
 from PyQt4 import Qt,QtGui,QtCore
@@ -8,11 +21,23 @@ class DesignerMainWindow(QtGui.QMainWindow,Ui_MainWindow):
         super(DesignerMainWindow, self).__init__(parent)
         self.setupUi(self) 
         self.connectActions()
-        self.translate()
-        self.retranslateUi(self)
+        #self.translate()
+        #self.retranslateUi(self)
+
+    def eventFilter(self, source, event): #hover functionality - gets called multiple times though!
+        if event.type() == QtCore.QEvent.MouseMove:
+            if event.buttons() == QtCore.Qt.NoButton:
+#                pos = event.pos()
+#                print pos.x(),pos.y()
+                if self.cancelPushButton.underMouse():
+                    self.clearText()
+        return QtGui.QMainWindow.eventFilter(self, source, event)
+
+    def clearText(self):
+        self.outputTextEdit.clear()
 
     def connectActions(self):
-        self.connect(self.hotPushButton,QtCore.SIGNAL('toggled()'),self.hotOutputTextEdit)
+        self.connect(self.hotPushButton,QtCore.SIGNAL('released()'),self.hotOutputTextEdit)
         self.connect(self.kaPushButton,QtCore.SIGNAL('released()'),self.kaOutputTextEdit)
         self.connect(self.coldPushButton,QtCore.SIGNAL('released()'),self.coldOutputTextEdit)
         self.connect(self.yesPushButton,QtCore.SIGNAL('released()'),self.yesOutputTextEdit)
@@ -64,6 +89,7 @@ class DesignerMainWindow(QtGui.QMainWindow,Ui_MainWindow):
         
 app = QtGui.QApplication(sys.argv)
 dmw = DesignerMainWindow()
+app.installEventFilter(dmw)
 dmw.show()
 sys.exit(app.exec_())
                      

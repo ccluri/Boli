@@ -10,14 +10,67 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Lohit Hindi</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Boli</string>
   </property>
+  <property name="locale">
+   <locale language="Hindi" country="India"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
     <item>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="4">
+      <item row="6" column="3">
+       <widget class="QTextEdit" name="outputTextEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lohit Hindi</family>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lohit Hindi'; font-size:36pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial,Helvetica,sans-serif'; font-size:medium; color:#000000;&quot;&gt;हेल्लो &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
        <widget class="QPushButton" name="foodPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -31,11 +84,11 @@
          </font>
         </property>
         <property name="text">
-         <string>Food</string>
+         <string>खाना</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="2" column="1">
        <widget class="QPushButton" name="waterPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -49,11 +102,11 @@
          </font>
         </property>
         <property name="text">
-         <string>Water</string>
+         <string>पानी</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item row="0" column="2">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -69,80 +122,7 @@
         </property>
        </spacer>
       </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="helloPushButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>36</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Hello</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="4">
-       <widget class="QPushButton" name="happyPushButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>36</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Happy</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QPushButton" name="yesPushButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <family>Ubuntu</family>
-          <pointsize>36</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Yes</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="2">
-       <widget class="QPushButton" name="noPushButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>36</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>No</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
+      <item row="1" column="1">
        <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -158,8 +138,8 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="4">
-       <widget class="QPushButton" name="coldPushButton">
+      <item row="4" column="1">
+       <widget class="QPushButton" name="helloPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -172,11 +152,87 @@
          </font>
         </property>
         <property name="text">
-         <string>Cold</string>
+         <string>हेल्लो </string>
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
+      <item row="4" column="5">
+       <widget class="QPushButton" name="happyPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>खुश</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="yesPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lohit Hindi</family>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>हां</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QPushButton" name="noPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ना</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="coldPushButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>सरदी</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
        <spacer name="horizontalSpacer_2">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -192,7 +248,7 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="0">
+      <item row="0" column="1">
        <widget class="QPushButton" name="hotPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -206,11 +262,11 @@
          </font>
         </property>
         <property name="text">
-         <string>Hot</string>
+         <string>गरमि</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
+      <item row="0" column="3">
        <widget class="QPushButton" name="kaPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -224,11 +280,11 @@
          </font>
         </property>
         <property name="text">
-         <string>KA</string>
+         <string>क</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="3" column="1">
        <spacer name="verticalSpacer_2">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -244,7 +300,7 @@
         </property>
        </spacer>
       </item>
-      <item row="5" column="0">
+      <item row="5" column="1">
        <spacer name="verticalSpacer_3">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -260,7 +316,7 @@
         </property>
        </spacer>
       </item>
-      <item row="6" column="0">
+      <item row="6" column="1">
        <widget class="QPushButton" name="cancelPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -270,6 +326,7 @@
         </property>
         <property name="font">
          <font>
+          <family>Lohit Hindi</family>
           <pointsize>36</pointsize>
          </font>
         </property>
@@ -277,11 +334,11 @@
          <string notr="true">background-color: rgb(161, 175, 255);</string>
         </property>
         <property name="text">
-         <string>Cancel</string>
+         <string>वापस</string>
         </property>
        </widget>
       </item>
-      <item row="6" column="4">
+      <item row="6" column="5">
        <widget class="QPushButton" name="sayPushButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
@@ -291,6 +348,7 @@
         </property>
         <property name="font">
          <font>
+          <family>Lohit Hindi</family>
           <pointsize>36</pointsize>
          </font>
         </property>
@@ -298,33 +356,39 @@
          <string notr="true">background-color: rgb(161, 175, 255);</string>
         </property>
         <property name="text">
-         <string>Say</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="2">
-       <widget class="QTextEdit" name="outputTextEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>36</pointsize>
-         </font>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:36pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>बोल</string>
         </property>
        </widget>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

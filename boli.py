@@ -16,6 +16,7 @@ import subprocess
 from PyQt4 import Qt,QtGui,QtCore
 from boliLayout import *
 
+
 class DesignerMainWindow(QtGui.QMainWindow,Ui_MainWindow):
     def __init__(self,parent=None):
         super(DesignerMainWindow, self).__init__(parent)
@@ -49,8 +50,9 @@ class DesignerMainWindow(QtGui.QMainWindow,Ui_MainWindow):
         self.connect(self.sayPushButton,QtCore.SIGNAL('released()'),self.sayItLoud)
 
     def sayItLoud(self):
-        p1 = subprocess.Popen(["echo", str(self.outputTextEdit.toPlainText())], stdout=subprocess.PIPE)
-        p2 = subprocess.Popen(["festival", "--tts"], stdin=p1.stdout, stdout=subprocess.PIPE)
+#        print unicode(self.outputTextEdit.toPlainText())
+        p1 = subprocess.Popen(["echo", unicode(self.outputTextEdit.toPlainText())], stdout=subprocess.PIPE)
+        p2 = subprocess.Popen(["festival","voice_hindi_NSK_diphone", "--tts"], stdin=p1.stdout, stdout=subprocess.PIPE)
 
     def hotOutputTextEdit(self):
         self.outputTextEdit.setText(self.hotPushButton.text())

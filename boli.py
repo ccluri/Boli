@@ -13,6 +13,7 @@
 
 import sys
 import subprocess
+import time
 from PyQt4 import Qt,QtGui,QtCore
 from boliLayout import *
 
@@ -24,6 +25,7 @@ class DesignerMainWindow(QtGui.QMainWindow,Ui_MainWindow):
         self.connectActions()
         #self.translate()
         #self.retranslateUi(self)
+        self.defaultTimePause = 0.5 #seconds
 
     def eventFilter(self, source, event): #hover functionality - gets called multiple times though!
         if event.type() == QtCore.QEvent.MouseMove:
@@ -32,6 +34,48 @@ class DesignerMainWindow(QtGui.QMainWindow,Ui_MainWindow):
 #                print pos.x(),pos.y()
                 if self.cancelPushButton.underMouse():
                     self.clearText()
+                    time.sleep(self.defaultTimePause)
+                    #             _________
+                    #page Deadend | 0 | 1 | Deadend
+                    #page Deadend | 2 | 3 | Deadend
+                    #             ---------  
+                elif self.leftPagePushButton.underMouse():
+                    thisPage = self.stackedWidget.currentIndex()
+                    if thisPage == 1:
+                        thisPage = self.stackedWidget.setCurrentIndex(0)
+                        time.sleep(self.defaultTimePause)
+                    elif thisPage ==3:
+                        thisPage = self.stackedWidget.setCurrentIndex(2)
+                        time.sleep(self.defaultTimePause)
+
+                elif self.rightPagePushButton.underMouse():
+                    thisPage = self.stackedWidget.currentIndex()
+                    if thisPage == 0:
+                        thisPage = self.stackedWidget.setCurrentIndex(1)
+                        time.sleep(self.defaultTimePause)
+                    elif thisPage ==2:
+                        thisPage = self.stackedWidget.setCurrentIndex(3)
+                        time.sleep(self.defaultTimePause)
+
+                elif self.topPagePushButton.underMouse():
+                    thisPage = self.stackedWidget.currentIndex()
+                    if thisPage == 2:
+                        thisPage = self.stackedWidget.setCurrentIndex(0)
+                        time.sleep(self.defaultTimePause)
+                    elif thisPage ==3:
+                        thisPage = self.stackedWidget.setCurrentIndex(1)
+                        time.sleep(self.defaultTimePause)
+
+                elif self.bottomPagePushButton.underMouse():
+                    thisPage = self.stackedWidget.currentIndex()
+                    if thisPage == 0:
+                        thisPage = self.stackedWidget.setCurrentIndex(2)
+                        time.sleep(self.defaultTimePause)
+                    elif thisPage == 1:
+                        thisPage = self.stackedWidget.setCurrentIndex(3)
+                        time.sleep(self.defaultTimePause)
+
+
         return QtGui.QMainWindow.eventFilter(self, source, event)
 
     def clearText(self):

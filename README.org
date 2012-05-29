@@ -13,7 +13,11 @@
 
 Boli (meaning, dialect)
 
-This is a (preliminary) QT application for specialised interfacing. 
+This is a (preliminary) QT application for specialised interfacing.
+
+Boli can be used for a means of communication for people with limited or no speech and limited locomotion.
+
+Currently being coded in Hindi, but eventually will be open to other languages. 
 
 To run:
 >python boli.py
@@ -24,4 +28,6 @@ Requirements:
 3) festival
 
 By:
-C.H.Chaitanya (ccluri@gmail.com)
+C.H.Chaitanya
+&
+Niraj Dudani 
